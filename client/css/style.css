@@ -1,0 +1,15 @@
+html, body {
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body.clicked{
+    background-color: #fff;
+}
+#id {
+    text-align: center;
+    margin: 0;
+    font-size: 100vh;
+}

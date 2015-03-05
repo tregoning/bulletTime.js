@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="/css/admin.css" />
+</head>
+<body>
+
+<h2 id="camerasTotal">Cameras: 0</h2>
+<img id="clicker" src="/img/camera.png">
+<div id="rig"></div>
+<div id="gifBox"></div>
+
+<script src="/libs/handlebars/handlebars.min.js"></script>
+<script src="/libs/gif.js/dist/gif.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/gif.js"></script>
+<script src="/js/admin.js"></script>
+
+<script id="rig-template" type="text/x-handlebars-template">
+    {{#each cameras}}
+        {{#if this.ready}}
+            <img src="/svg/camera.svg" title="{{this.id}}"/>
+        {{else}}
+            <img src="/svg/cameraOffline.svg" title="{{this.id}}"/>
+        {{/if}}
+    {{/each}}
+</script>
+
+</body>
+</html>
