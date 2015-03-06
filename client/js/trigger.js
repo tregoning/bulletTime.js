@@ -1,31 +1,37 @@
-//(function(){
+(function() {
 
-var socket = io.connect('http://lgml-jtregoning.corp.netflix.com/'),
-    clicker;
+    var socket = io.connect('http://your-server-here/'),
+        isDisabled = false,
+        clicker;
 
-var snap = function() {
+    var snap = function() {
 
-    socket.emit('snap');
+        socket.emit('snap');
 
-};
+    };
 
-var init = function() {
+    var init = function() {
 
-    clicker = document.body;
+        clicker = document.body;
 
-    clicker.addEventListener('click', function() {
-        snap();
-    }, false);
+        clicker.addEventListener('click', function() {
 
-    clicker.addEventListener('touchstart', function() {
-        snap();
-    }, false);
+            if (!isDisabled){
+                isDisabled = true;
+                socket.emit('snap');
+            }
+            window.setTimeout(function(){
+                isDisabled = false;
+            }, 1000);
 
-    socket.emit('iAmTrigger');
+        }, false);
 
-};
+        socket.emit('iAmTrigger');
 
-socket.on('connect', function(){
-    init();
-});
-//}());
+    };
+
+    socket.on('connect', function(){
+        init();
+    });
+
+}());

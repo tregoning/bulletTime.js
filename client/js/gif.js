@@ -4,7 +4,7 @@ nf.gif = (function() {
 
     var gif,
         img,
-        sampleInterval = 333,
+        sampleInterval = 150,
         outputBox;
 
     var setupGifEngine = function(width, height) {
@@ -29,23 +29,7 @@ nf.gif = (function() {
             wrapper.classList.add('imgWrapper');
             wrapper.href = img.src;
 
-            //wrapper.addEventListener('click', function() {
-            //    //sending file to server
-            //    var fileName ='nfx-' + new Date().getTime() + '.gif';
-            //
-            //    var theForm = new FormData(),
-            //        request = new XMLHttpRequest();
-            //    theForm.append('file', blob, fileName);
-            //    request.open(
-            //        "POST",
-            //        "http://meme-api.netflix.com/api/v1/upload",
-            //        true
-            //    );
-            //    //request.send(theForm);
-            //
-            //});
-
-            //wrapper.setAttribute('download', 'meme-' + new Date().getTime());
+            wrapper.setAttribute('download', 'bulletTime-' + new Date().getTime());
 
             wrapper.appendChild(img);
             outputBox.appendChild(wrapper);

@@ -8,6 +8,7 @@ html, body {
 body.clicked{
     background-color: #fff;
 }
+
 #id {
     text-align: center;
     margin: 0;

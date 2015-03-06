@@ -5,3 +5,15 @@
     top: 0;
     right: 0;
 }
+
+#gifBox {
+    text-align: center;
+}
+
+body{
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+h2{
+    text-transform: uppercase;
+}

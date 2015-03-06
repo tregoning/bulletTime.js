@@ -13,5 +13,9 @@
     "client/libs/",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "handlebars": "~3.0.0",
+    "gif.js": "~0.1.6"
+  }
 }
