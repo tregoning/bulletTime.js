@@ -11,7 +11,7 @@ Attempt to recreate the famous 'Bullet Time' FX using only web tech, (HTML5, web
 This is the results of a Hackday, as you might expect the code is not *great* here are some of the obvious things that are missing
 
 * Config file (at the moment the user needs to add the server name in muliple files)
-* Ability to re-arange dynamically the order of the cameras
+* Ability to re-arrange dynamically the order of the cameras
 * Ability to configure the resolution of the GIF
 * Options to trigger by sound, or relaying on NTP
 * Ability to cleanly add more shots without having to reload the admin page after each shot
