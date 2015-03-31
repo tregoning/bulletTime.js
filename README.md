@@ -15,6 +15,7 @@ This is the results of a Hackday, as you might expect the code is not *great* he
 * Ability to configure the resolution of the GIF
 * Options to trigger by sound, or relaying on NTP
 * Ability to cleanly add more shots without having to reload the admin page after each shot
+* Explore posibility of using something like camanjs.com to deal with camera differences
 * Documentation, and setup instructions
 
 #Plug:
